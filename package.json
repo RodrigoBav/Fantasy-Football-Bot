@@ -1,0 +1,38 @@
+{
+  "name": "fantasy-lineup-builder",
+  "version": "1.0.0",
+  "description": "Fantasy Football Weekly Line-up Builder",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "clean": "del /s /q build",
+    "build": "tsc --build",
+    "start": "npm run format && npm run cleanCode && npm run build && node build/index.js",
+    "startNoClean": "npm run build && node build/index.js",
+    "format": "prettier src --write",
+    "format:check": "prettier src --check",
+    "lint": "eslint . --fix --no-cache",
+    "cleanCode": "npm run format && npm run lint"
+  },
+  "author": "Rodrigo Bavarian",
+  "license": "ISC",
+  "dependencies": {
+    "cron-job-manager": "^2.3.1",
+    "discord.js": "^14.16.1",
+    "glob": "^11.0.0",
+    "json-stringify": "^1.0.0",
+    "lodash": "^4.17.21",
+    "markdown-table-ts": "^1.0.3",
+    "moment-timezone": "^0.5.45",
+    "mongoose": "^8.7.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-unused-imports": "^4.1.3"
+  }
+}

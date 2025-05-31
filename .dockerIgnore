@@ -1,0 +1,5 @@
+node_modules/
+build/
+mock-responses/
+.prettierrc
+eslint.config.js
